@@ -58,21 +58,21 @@ export default function Edit({ attributes, className, setAttributes }) {
 					<Icon icon={check} /> <RichText
 						tagName="span"
 						className="jobs"
-						value={attributes.funktion}
+						value={attributes.jobs}
 						onChange={(jobs) => setAttributes({ jobs })}
 						placeholder='Aufgaben...'
 					/>
 					<Icon icon={check} /> <RichText
 						tagName="span"
 						className="telefon-number"
-						value={attributes.funktion}
+						value={attributes.telefon}
 						onChange={(telefon) => setAttributes({ telefon })}
 						placeholder='Telefon...'
 					/>
 					<Icon icon={check} /> <RichText
 						tagName="span"
 						className="email"
-						value={attributes.funktion}
+						value={attributes.email}
 						onChange={(email) => setAttributes({ email })}
 						placeholder='E-Mail...'
 					/>
