@@ -1,17 +1,4 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
-
-.wp-block-bas-person-block-person-block {
-	background-color: var(--wp-admin-theme-color);
-	color: #fff;
-	padding: 2px;
-}
-
-/* Block */
+@import "breakpoint";
 
 .wp-block-bas-person-block-person-block {
 	display: grid;
@@ -29,11 +16,21 @@
 	padding: 1em;
 	margin: 1em;
 	max-width: 50em;
+
+	@include breakpoint("m") {
+		grid-template-areas: "image person-info";
+		padding: 2em;
+	}
+
 	h3 {
 		font-size: 1.9em;
 		margin: 0 0 0.7em 0;
 		font-weight: bold;
 		text-align: center;
+
+		@include breakpoint("m") {
+			text-align: left;
+		}
 	}
 
 	.data ul {
@@ -60,42 +57,31 @@
 	}
 	.person-info {
 		grid-area: person-info;
-	}
-}
+		@include breakpoint("m") {
+			margin-left: 1.5em;
+		}
 
-.wp-block-bas-person-block-person-block .data {
-	display: grid;
-	grid-row-gap: 0.6em;
-	justify-items: center;
-}
-
-.data > span {
-	display: inline-block;
-	margin-bottom: 0.6em;
-}
-
-// .person-info > i {
-// 	font-size: 1.5em;
-// }
-
-@media screen and (min-width: 40em) {
-	.wp-block-bas-person-block-person-block {
-		grid-template-areas: "image person-info";
-		padding: 2em;
+		i {
+			@include breakpoint("m") {
+				font-size: 1.3em;
+			}
+		}
 	}
-	.wp-block-bas-person-block-person-block h3 {
-		text-align: left;
-	}
-	.person-info {
-		margin-left: 1.5em;
-	}
-	.wp-block-bas-person-block-person-block .data {
+	.data {
 		display: grid;
-		grid-template-columns: 2.5em auto;
-		align-items: center;
-		justify-items: left;
-	}
-	.person-info i {
-		font-size: 1.3em;
+		grid-row-gap: 0.6em;
+		justify-items: center;
+
+		@include breakpoint("m") {
+			display: grid;
+			grid-template-columns: 2.5em auto;
+			align-items: center;
+			justify-items: left;
+		}
+
+		> span {
+			display: inline-block;
+			margin-bottom: 0.6em;
+		}
 	}
 }
