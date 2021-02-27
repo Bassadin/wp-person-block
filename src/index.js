@@ -89,6 +89,11 @@ registerBlockType( 'bas-person-block/person-block', {
 			type: 'string',
 			source: 'text',
 			selector: 'span.function-name'
+		},
+		telefon: {
+			type: 'string',
+			source: 'text',
+			selector: 'span.telefon-number'
 		}
 	}
 } );

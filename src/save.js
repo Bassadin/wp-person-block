@@ -27,14 +27,14 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save({ attributes, className }) {
 	const blockProps = useBlockProps.save();
-	
+
 	return (
 		<div {...blockProps}>
 			<img src="https://picsum.photos/id/1027/200" />
 			<div class="person-info">
-				<RichText.Content tagName="h3" value={attributes.personName} />
+				<RichText.Content tagName="h3" className="person-name" value={attributes.personName} />
 				<div class="data">
-					<Icon icon={check} />  <RichText.Content class="function" tagName="span" value={attributes.funktion} />
+					<Icon icon={check} />  <RichText.Content tagName="span" className="function-name" value={attributes.funktion} />
 					<Icon icon={check} /> <span class="jobs">
 						<ul>
 							<li>Allgemeine Organisation und
@@ -43,7 +43,7 @@ export default function save({ attributes, className }) {
 							<li>Finanzen</li>
 						</ul>
 					</span>
-					<Icon icon={check} /> <span class="tel">07665/51525</span>
+					<Icon icon={check} /> <RichText.Content tagName="span" className="telefon-number" value={attributes.telefon} />
 					<Icon icon={check} /> <span class="email">norbert.glöckler@bla.de</span>
 				</div>
 			</div>
