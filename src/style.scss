@@ -1,0 +1,102 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-bas-person-block-person-block {
+	background-color: var(--wp-admin-theme-color);
+	color: #fff;
+	padding: 2px;
+}
+
+/* Block */
+
+.wp-block-bas-person-block-person-block {
+	display: grid;
+	color: hsl(199, 74%, 93%);
+	grid-template-columns: minmax(10em, auto) auto;
+	grid-row-gap: 1.5em;
+	grid-template-areas:
+		"image"
+		"person-info";
+	align-items: center;
+	background-color: hsl(199, 74%, 40%);
+	border-radius: 0.5em;
+	border: 0.3em solid hsl(199, 74%, 30%);
+	box-shadow: 0.3em 0.3em 0.6em hsla(0, 0%, 30%, 30%);
+	padding: 1em;
+	margin: 1em;
+	max-width: 50em;
+	h3 {
+		font-size: 1.9em;
+		margin: 0 0 0.7em 0;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+
+.wp-block-bas-person-block-person-block img {
+	width: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 0.25em solid hsl(199, 74%, 20%);
+	grid-area: image;
+}
+
+.person-info {
+	grid-area: person-info;
+}
+
+.wp-block-bas-person-block-person-block .data {
+	display: grid;
+	grid-row-gap: 0.6em;
+	justify-items: center;
+}
+
+.data ul {
+	padding-left: 1.2em;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style: none;
+}
+
+.data ul li {
+	padding: 0.4em 0.8em;
+	margin-bottom: 0.3em;
+	background-color: hsl(199, 74%, 20%);
+	border-radius: 0.3em;
+}
+
+.person-info span {
+	display: inline-block;
+	margin-bottom: 0.6em;
+}
+
+.person-info i {
+	font-size: 1.5em;
+}
+
+@media screen and (min-width: 40em) {
+	.wp-block-bas-person-block-person-block {
+		grid-template-areas: "image person-info";
+		padding: 2em;
+	}
+	.wp-block-bas-person-block-person-block h3 {
+		text-align: left;
+	}
+	.person-info {
+		margin-left: 1.5em;
+	}
+	.wp-block-bas-person-block-person-block .data {
+		display: grid;
+		grid-template-columns: 2.5em auto;
+		align-items: center;
+		justify-items: left;
+	}
+	.person-info i {
+		font-size: 1.3em;
+	}
+}

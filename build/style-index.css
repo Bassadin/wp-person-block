@@ -1,0 +1,123 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-bas-person-block-person-block {
+  background-color: var(--wp-admin-theme-color);
+  color: #fff;
+  padding: 2px;
+}
+
+/* Block */
+.wp-block-bas-person-block-person-block {
+  display: -ms-grid;
+  display: grid;
+  color: #e0f2fa;
+  -ms-grid-columns: minmax(10em, auto) auto;
+  grid-template-columns: minmax(10em, auto) auto;
+  grid-row-gap: 1.5em;
+  -ms-grid-rows: auto 1.5em auto;
+      grid-template-areas: "image" "person-info";
+  align-items: center;
+  background-color: #1b82b1;
+  border-radius: 0.5em;
+  border: 0.3em solid #146185;
+  box-shadow: 0.3em 0.3em 0.6em rgba(77, 77, 77, 0.3);
+  padding: 1em;
+  margin: 1em;
+  max-width: 50em;
+}
+.wp-block-bas-person-block-person-block h3 {
+  font-size: 1.9em;
+  margin: 0 0 0.7em 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wp-block-bas-person-block-person-block img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 0.25em solid #0d4159;
+  grid-area: image;
+}
+
+.person-info {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: person-info;
+}
+
+.wp-block-bas-person-block-person-block .data {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 0.6em;
+  justify-items: center;
+}
+
+.data ul {
+  padding-left: 1.2em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.data ul li {
+  padding: 0.4em 0.8em;
+  margin-bottom: 0.3em;
+  background-color: #0d4159;
+  border-radius: 0.3em;
+}
+
+.person-info span {
+  display: inline-block;
+  margin-bottom: 0.6em;
+}
+
+.person-info i {
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 40em) {
+  .wp-block-bas-person-block-person-block {
+        grid-template-areas: "image person-info";
+    padding: 2em;
+  }
+
+  .wp-block-bas-person-block-person-block h3 {
+    text-align: left;
+  }
+
+  .person-info {
+    margin-left: 1.5em;
+  }
+
+  .wp-block-bas-person-block-person-block .data {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2.5em auto;
+    grid-template-columns: 2.5em auto;
+    align-items: center;
+    justify-items: left;
+  }
+
+  .person-info i {
+    font-size: 1.3em;
+  }
+  .wp-block-bas-person-block-person-block img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .person-info {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

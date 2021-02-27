@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "bas-person-block/person-block",
+	"title": "Bastian Personen Block",
+	"category": "design",
+	"icon": "businessperson",
+	"description": "Simple Person Block",
+	"textdomain": "person-block",
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
