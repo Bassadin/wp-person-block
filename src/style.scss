@@ -35,18 +35,32 @@
 		font-weight: bold;
 		text-align: center;
 	}
-}
 
-.wp-block-bas-person-block-person-block img {
-	width: 100%;
-	object-fit: cover;
-	border-radius: 50%;
-	border: 0.25em solid hsl(199, 74%, 20%);
-	grid-area: image;
-}
+	.data ul {
+		padding-left: 1.2em;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		list-style: none;
+	}
 
-.person-info {
-	grid-area: person-info;
+	.data ul li {
+		padding: 0.4em 0.8em;
+		margin-bottom: 0.3em;
+		background-color: hsl(199, 74%, 20%);
+		border-radius: 0.3em;
+	}
+
+	img {
+		width: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 0.25em solid hsl(199, 74%, 20%);
+		grid-area: image;
+	}
+	.person-info {
+		grid-area: person-info;
+	}
 }
 
 .wp-block-bas-person-block-person-block .data {
@@ -55,29 +69,14 @@
 	justify-items: center;
 }
 
-.data ul {
-	padding-left: 1.2em;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	list-style: none;
-}
-
-.data ul li {
-	padding: 0.4em 0.8em;
-	margin-bottom: 0.3em;
-	background-color: hsl(199, 74%, 20%);
-	border-radius: 0.3em;
-}
-
-.person-info span {
+.data > span {
 	display: inline-block;
 	margin-bottom: 0.6em;
 }
 
-.person-info i {
-	font-size: 1.5em;
-}
+// .person-info > i {
+// 	font-size: 1.5em;
+// }
 
 @media screen and (min-width: 40em) {
 	.wp-block-bas-person-block-person-block {
