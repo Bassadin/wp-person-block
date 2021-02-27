@@ -43,7 +43,6 @@ export default function Edit({ attributes, className, setAttributes }) {
 					tagName="h3"
 					className="person-name"
 					value={attributes.personName}
-					allowedFormats={['core/bold', 'core/italic']}
 					onChange={(personName) => setAttributes({ personName })}
 					placeholder='Person Name...'
 				/>
@@ -53,26 +52,30 @@ export default function Edit({ attributes, className, setAttributes }) {
 						tagName="span"
 						className="function-name"
 						value={attributes.funktion}
-						allowedFormats={['core/bold', 'core/italic']}
 						onChange={(funktion) => setAttributes({ funktion })}
 						placeholder='Funktion...'
 					/>
-					<Icon icon={check} /> <span class="jobs">
-						<ul>
-							<li>Allgemeine Organisation und Öffentlichkeitsarbeit</li>
-							<li>Organisation Feste</li>
-							<li>Finanzen</li>
-						</ul>
-					</span>
+					<Icon icon={check} /> <RichText
+						tagName="span"
+						className="jobs"
+						value={attributes.funktion}
+						onChange={(jobs) => setAttributes({ jobs })}
+						placeholder='Aufgaben...'
+					/>
 					<Icon icon={check} /> <RichText
 						tagName="span"
 						className="telefon-number"
 						value={attributes.funktion}
-						allowedFormats={['core/bold', 'core/italic']}
 						onChange={(telefon) => setAttributes({ telefon })}
 						placeholder='Telefon...'
 					/>
-					<Icon icon={check} /> <span class="email">norbert.glöckler@bla.de</span>
+					<Icon icon={check} /> <RichText
+						tagName="span"
+						className="email"
+						value={attributes.funktion}
+						onChange={(email) => setAttributes({ email })}
+						placeholder='E-Mail...'
+					/>
 				</div>
 			</div>
 		</div>

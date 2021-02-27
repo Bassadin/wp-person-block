@@ -32,7 +32,7 @@ import save from './save';
  *
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
-registerBlockType( 'bas-person-block/person-block', {
+registerBlockType('bas-person-block/person-block', {
 	/**
 	 * @see https://make.wordpress.org/core/2020/11/18/block-api-version-2/
 	 */
@@ -42,13 +42,13 @@ registerBlockType( 'bas-person-block/person-block', {
 	 * This is the display title for your block, which can be translated with `i18n` functions.
 	 * The block inserter will show this name.
 	 */
-	title: __( 'Bastian Personen Block', 'person-block' ),
+	title: __('Bastian Personen Block', 'person-block'),
 
 	/**
 	 * This is a short description for your block, can be translated with `i18n` functions.
 	 * It will be shown in the Block Tab in the Settings Sidebar.
 	 */
-	description: __( 'Simple Person Block', 'person-block' ),
+	description: __('Simple Person Block', 'person-block'),
 
 	/**
 	 * Blocks are grouped into categories to help users browse and discover them.
@@ -68,6 +68,7 @@ registerBlockType( 'bas-person-block/person-block', {
 	supports: {
 		// Removes support for an HTML mode.
 		html: false,
+		align: true
 	},
 
 	/**
@@ -82,18 +83,28 @@ registerBlockType( 'bas-person-block/person-block', {
 	attributes: {
 		personName: {
 			type: 'string',
-			source: 'text',
+			source: 'html',
 			selector: 'h3.person-name'
 		},
 		funktion: {
 			type: 'string',
-			source: 'text',
+			source: 'html',
 			selector: 'span.function-name'
+		},
+		jobs: {
+			type: 'string',
+			source: 'html',
+			selector: 'span.jobs'
 		},
 		telefon: {
 			type: 'string',
-			source: 'text',
+			source: 'html',
 			selector: 'span.telefon-number'
-		}
+		},
+		email: {
+			type: 'string',
+			source: 'html',
+			selector: 'span.email'
+		},
 	}
-} );
+});

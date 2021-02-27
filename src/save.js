@@ -34,17 +34,10 @@ export default function save({ attributes, className }) {
 			<div class="person-info">
 				<RichText.Content tagName="h3" className="person-name" value={attributes.personName} />
 				<div class="data">
-					<Icon icon={check} />  <RichText.Content tagName="span" className="function-name" value={attributes.funktion} />
-					<Icon icon={check} /> <span class="jobs">
-						<ul>
-							<li>Allgemeine Organisation und
-							Öffentlichkeitsarbeit</li>
-							<li>Organisation Feste</li>
-							<li>Finanzen</li>
-						</ul>
-					</span>
+					<Icon icon={check} /> <RichText.Content tagName="span" className="function-name" value={attributes.funktion} />
+					<Icon icon={check} /> <RichText.Content tagName="span" className="jobs" value={attributes.jobs} />
 					<Icon icon={check} /> <RichText.Content tagName="span" className="telefon-number" value={attributes.telefon} />
-					<Icon icon={check} /> <span class="email">norbert.glöckler@bla.de</span>
+					<Icon icon={check} /> <RichText.Content tagName="span" className="email" value={attributes.email} />
 				</div>
 			</div>
 		</div>
